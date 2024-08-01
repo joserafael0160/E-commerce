@@ -1,5 +1,5 @@
 import "./Footer.css"
-
+import PropTypes from "react"
 export function Footer ({ filters }) {
   return (
     <footer className="footer">
@@ -8,4 +8,8 @@ export function Footer ({ filters }) {
       }
     </footer>
   )
+}
+
+Footer.propTypes = {
+  filters: PropTypes.func
 }
