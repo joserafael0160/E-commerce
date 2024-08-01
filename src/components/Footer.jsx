@@ -1,6 +1,7 @@
 import "./Footer.css"
-import PropTypes from "react"
-export function Footer ({ filters }) {
+import { useFilters } from "../hooks/useFilters"
+export function Footer () {
+  const { filters } = useFilters()
   return (
     <footer className="footer">
       {
@@ -8,8 +9,4 @@ export function Footer ({ filters }) {
       }
     </footer>
   )
-}
-
-Footer.propTypes = {
-  filters: PropTypes.func
 }
