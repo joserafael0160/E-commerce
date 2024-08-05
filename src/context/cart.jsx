@@ -15,18 +15,22 @@ function useCartReducer() {
     payload: product 
   })
 
+  const restToCart = product => dispatch({
+    type: "REST_TO_CART",
+    payload: product 
+  })
 
   const clearCart = () => dispatch({
     type: "CLEAR_CART",
   })
 
-  return { state, addToCart, removeFromCart, clearCart }
+  return { state, addToCart, removeFromCart, restToCart, clearCart }
 }
 // eslint-disable-next-line react/prop-types
 export function CartProvider ({ children }) {
-  const { state, addToCart, removeFromCart, clearCart } = useCartReducer()
+  const { state, addToCart, removeFromCart, restToCart, clearCart } = useCartReducer()
 
   return  (
-    <CartContext.Provider value = {{ cart: state, addToCart,removeFromCart, clearCart}}>{children}</CartContext.Provider>
+    <CartContext.Provider value = {{ cart: state, addToCart, removeFromCart, restToCart, clearCart}}>{children}</CartContext.Provider>
   )
 }

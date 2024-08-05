@@ -34,6 +34,8 @@ export function Products ({ products }) {
                     isProductionInCart
                       ? removeFromCart(product)
                       : addToCart(product)
+
+                    
                   }}>
                     {
                       isProductionInCart

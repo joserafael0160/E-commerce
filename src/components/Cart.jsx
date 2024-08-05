@@ -3,7 +3,7 @@ import { CartIcon, ClearCartIcon } from "./Icons";
 import { useId } from "react";
 import { useCart } from "../hooks/useCart";
 import PropTypes from "react"
-function CartItem ({ image, price, title, quantity, addToCart }) {
+function CartItem ({ image, price, title, quantity, addToCart, restToCart }) {
   return (
     <li>
       <img
@@ -20,7 +20,10 @@ function CartItem ({ image, price, title, quantity, addToCart }) {
         <small>
           Qty: {quantity}
         </small>
-        <button onClick={addToCart}>+</button>
+        <div className="buttons-cart">
+          <button onClick={addToCart}>+</button>
+          <button onClick={restToCart}>-</button>
+        </div>
       </footer>
     </li>
   )
@@ -30,13 +33,14 @@ CartItem.propTypes = {
   price: PropTypes.number,
   title: PropTypes.string,
   quantity: PropTypes.number,
-  addToCart: PropTypes.func,
+  addToCart: PropTypes.function,
+  restToCart: PropTypes.function,
 }
 
 export function Cart () {
   const cartCheckboxId = useId()
-  const { cart, clearCart, addToCart } = useCart()
-
+  const { cart, addToCart, restToCart, clearCart } = useCart()
+  
   return (
     <>
       <input id={cartCheckboxId} type="checkbox" hidden/>
@@ -48,11 +52,10 @@ export function Cart () {
         <ul>
           {
             cart.map(product => (
-              <CartItem key={product.id} addToCart={() => addToCart(product)} {...product}/>
+              <CartItem key={product.id} addToCart={() => addToCart(product)} restToCart={() => restToCart(product)} {...product}/>
             ))
           }
         </ul>
-
         <button onClick={clearCart}>
           <ClearCartIcon />
         </button>

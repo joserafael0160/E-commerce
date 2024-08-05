@@ -29,9 +29,6 @@
   align-items: center;
 }
 
-.cart footer button {
-  padding: 8px;
-}
 
 .price {
   color: #afa;
@@ -55,6 +52,19 @@
   border: 1px solid black;
   z-index: 9999;
   color: black
+}
+.cart .buttons-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cart small {
+  font-size: 1rem;
+}
+
+.cart .buttons-cart button {
+  padding: 2px 18px;
 }
 
 .cart-button:hover {
