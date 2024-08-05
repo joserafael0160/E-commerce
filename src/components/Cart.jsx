@@ -2,7 +2,7 @@ import "./Cart.css"
 import { CartIcon, ClearCartIcon } from "./Icons";
 import { useId } from "react";
 import { useCart } from "../hooks/useCart";
-
+import PropTypes from "react"
 function CartItem ({ image, price, title, quantity, addToCart }) {
   return (
     <li>
@@ -11,7 +11,10 @@ function CartItem ({ image, price, title, quantity, addToCart }) {
         alt={title}
       />
       <div>
-        <strong>{title}</strong> - ${price}
+        <strong>{title}</strong>  
+        <div className="price">
+        ${price}
+        </div>
       </div>
       <footer>
         <small>
@@ -22,6 +25,13 @@ function CartItem ({ image, price, title, quantity, addToCart }) {
     </li>
   )
 }
+CartItem.propTypes = {
+  image: PropTypes.string,
+  price: PropTypes.number,
+  title: PropTypes.string,
+  quantity: PropTypes.number,
+  addToCart: PropTypes.func,
+}
 
 export function Cart () {
   const cartCheckboxId = useId()
@@ -29,10 +39,10 @@ export function Cart () {
 
   return (
     <>
+      <input id={cartCheckboxId} type="checkbox" hidden/>
       <label htmlFor={cartCheckboxId} className="cart-button">
         <CartIcon />
       </label>
-      <input id={cartCheckboxId} type="checkbox" hidden/>
 
       <aside className="cart">
         <ul>

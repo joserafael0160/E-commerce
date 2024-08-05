@@ -6,8 +6,9 @@
   right: 0px;
   top: 0px;
   width: 200px;
-  transition: all 1s ease;
-
+  overflow-y: scroll;
+  scrollbar-color: #7e2bcc #333;
+  scrollbar-width: thin;
 }
 
 .cart img {
@@ -18,7 +19,7 @@
 
 .cart li {
   border-bottom: 1px solid #444;
-  padding-bottom: 16px;
+  padding: 22px 0;
 }
 
 .cart footer {
@@ -32,6 +33,11 @@
   padding: 8px;
 }
 
+.price {
+  color: #afa;
+  font-size: 1.7rem;
+}
+
 .cart-button {
   align-items: center;
   background: #7e2bcc;
@@ -41,19 +47,26 @@
   height: 32px;
   justify-content: center;
   padding: 4px;
-  position: absolute;
-  right: 8px;
-  top: 8px;
+  position: fixed;
+  right: 16px;
+  top: 12px;
   transition: all .3s ease;
   width: 32px;
+  border: 1px solid black;
   z-index: 9999;
+  color: black
 }
 
 .cart-button:hover {
-  transform: scale: 1.1;
+  transform: scale(1.2);
 }
 
-.cart-button ~ input:checked ~ .cart {
-  height: 100%;
+input[type="checkbox"]:checked ~ .cart-button {
+  background-color: #f33;
+}
+
+input[type="checkbox"]:checked ~ .cart-button  ~ .cart {
+  height: calc(100% - 50px);
   display: block;
 }
+
