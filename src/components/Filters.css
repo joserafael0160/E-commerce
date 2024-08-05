@@ -11,8 +11,8 @@
 }
 .filters > div > span {
   position: absolute;
-  top: -26px;
-  left: 60px;
+  top: -20px;
+  left: 90px;
 }
 
 @media screen and (max-width: 500px) {

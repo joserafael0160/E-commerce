@@ -23,7 +23,7 @@ export function Filters() {
     <section className="filters">
 
       <div>
-        <label htmlFor={minPriceFilterId}>Price</label>
+        <label htmlFor={minPriceFilterId}>Min Price</label>
         <input type="range"  id={minPriceFilterId} min="0" max="1000" onChange={handleChangeMinPrice} value={filters.minPrice}/>
         <span>${filters.minPrice}</span>
       </div>
