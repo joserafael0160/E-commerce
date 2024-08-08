@@ -1,6 +1,6 @@
 import "./Cart.css"
-import { CartIcon, ClearCartIcon } from "./Icons";
-import { useId } from "react";
+import { CartIcon, ClearCartIcon, CrossIcon } from "./Icons";
+import { useId, useState } from "react";
 import { useCart } from "../hooks/useCart";
 import PropTypes from "react"
 function CartItem ({ image, price, title, quantity, addToCart, restToCart }) {
@@ -40,12 +40,20 @@ CartItem.propTypes = {
 export function Cart () {
   const cartCheckboxId = useId()
   const { cart, addToCart, restToCart, clearCart } = useCart()
+  const [check, setCheck] = useState(false)
   
+  function handleCheck() {
+    setCheck(!check)
+  }
+
   return (
     <>
-      <input id={cartCheckboxId} type="checkbox" hidden/>
-      <label htmlFor={cartCheckboxId} className="cart-button">
-        <CartIcon />
+      <input id={cartCheckboxId} type="checkbox" hidden />
+      <label onClick={handleCheck} htmlFor={cartCheckboxId} className="cart-button" >
+        {
+          check ? <CrossIcon/> : <CartIcon/>
+        }
+        
       </label>
 
       <aside className="cart">
