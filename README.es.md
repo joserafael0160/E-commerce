@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<h1 align="center"><img src="./public/favicons/favicon-96x96.png" width="30" align="center"> Buscador de Películas</h1>  
+<h1 align="center"><img src="./public/favicons/favicon-96x96.png" width="30" align="center"> E-commerce</h1>  
 
 <p align="center">
   <a href="#">
@@ -68,8 +68,6 @@ Bienvenido a nuestro E-commerce: En nuestro sitio, puedes explorar una amplia va
 <img src="./src/assets/images/webp/E-commerce(iPhone_SE).webp" alt="Captura de pantalla del proyecto con una resolucion de 375x667" width="200">
 
 <p align="right">(<a href="#top">Volver al inicio 🔝</a>)</p>
-
-¡Claro! Aquí tienes una descripción de las características que has implementado en tu buscador de películas con React:
 
 ## 💬 Características
  - **Soporte de Favicon**: Se ha añadido soporte para una amplia v dad de tamaños de favicon, asegurando que el ícono del sitio se muestre correctamente en todos los dispositivos y plataformas.

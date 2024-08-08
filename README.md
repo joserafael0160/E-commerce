@@ -1,21 +1,6 @@
-
-1. E-commerce
-   - Display a list of products that come from a JSON.
-   - Add a filter by category.
-   - Add a filter by price.
-
-Make use of useContext to avoid passing unnecessary props.
-
-2. Shopping Cart
-   - Make it possible to add products to a cart.
-   - Make it possible to remove products from the cart.
-   - Make it possible to modify the quantity of products in the cart.
-   - Synchronize the changes of the cart with the product list.
-   - Save the cart in localStorage so it can be recovered when reloading the page. (gives points)
-
 <a id="top"></a>
 
-<h1 align="center"><img src="./public/favicons/favicon-96x96.png" width="30" align="center"> Movie Finder</h1>
+<h1 align="center"><img src="./public/favicons/favicon-96x96.png" width="30" align="center"> E-commerce</h1>
 
 
 <p align="center">
@@ -79,9 +64,6 @@ Enjoy the convenience of online shopping and discover everything we have to offe
 <p align="right">(<a href="#top" >Go Back To Top 🔝</a>)</p>
 
 ## 👀 Preview
-<h4>In a PC (1920x1080)</h4>
-<img src="./src/assets/images/webp/E-commerce(PC).webp" alt="Project screenshot with a resolution of 1920x1080" width="900">
-
 <h4>In a iPhone SE (375x667)</h4>
 <img src="./src/assets/images/webp/E-commerce(iPhone_SE).webp" alt="Project screenshot with a resolution of 375x667" width="200">
 
