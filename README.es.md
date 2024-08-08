@@ -64,9 +64,6 @@ Bienvenido a nuestro E-commerce: En nuestro sitio, puedes explorar una amplia va
 <p align="right">(<a href="#top" >Volver al inicio 🔝</a>)</p>
 
 ## 👀 Vista previa
-<h4>En un PC (1920x1080)</h4>
-<img src="./src/assets/images/webp/E-commerce(PC).webp" alt="Captura de pantalla del proyecto con una resolucion de 1920x1080" width="900">
-
 <h4>En un iPhone SE (375x667)</h4>
 <img src="./src/assets/images/webp/E-commerce(iPhone_SE).webp" alt="Captura de pantalla del proyecto con una resolucion de 375x667" width="200">
 
