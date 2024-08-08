@@ -51,45 +51,63 @@
 <br>
 
 >Si quieres leer este readme en **inglés**:
->- [**README en Inglés**](https://github.com/joserafael0160/Movie-Finder/blob/main/README.md)
+>- [**README en Inglés**](https://github.com/joserafael0160/E-commerce/blob/main/README.md)
 
 ## 📜 Acerca Del Proyecto
-¡Bienvenido a mi buscador de películas! Con esta herramienta, puedes explorar y buscar tus películas favoritas. 
+Bienvenido a nuestro E-commerce: En nuestro sitio, puedes explorar una amplia variedad de productos, desde ropa de hombre y mujer hasta equipos electrónicos y joyería. 
 
-Filtra por año de lanzamiento y descubre nuevas joyas cinematográficas. 
+¿Buscas algo específico? Utiliza nuestros filtros por categoría o precio mínimo para encontrar lo que necesitas. 
 
-¡Disfruta de la magia del cine! 🎥🍿
+¡Disfruta de la comodidad de comprar en línea y descubre todo lo que tenemos para ofrecerte! 💻🛒
 
 
 <p align="right">(<a href="#top" >Volver al inicio 🔝</a>)</p>
 
 ## 👀 Vista previa
 <h4>En un PC (1920x1080)</h4>
-<img src="./src/assets/images/webp/Movie-Finder(PC).webp" alt="Captura de pantalla del proyecto con una resolucion de 1920x1080" width="900">
+<img src="./src/assets/images/webp/E-commerce(PC).webp" alt="Captura de pantalla del proyecto con una resolucion de 1920x1080" width="900">
 
 <h4>En un iPhone SE (375x667)</h4>
-<img src="./src/assets/images/webp/Movie-Finder(iPhone_SE).webp" alt="Captura de pantalla del proyecto con una resolucion de 375x667" width="200">
+<img src="./src/assets/images/webp/E-commerce(iPhone_SE).webp" alt="Captura de pantalla del proyecto con una resolucion de 375x667" width="200">
 
 <p align="right">(<a href="#top">Volver al inicio 🔝</a>)</p>
 
 ¡Claro! Aquí tienes una descripción de las características que has implementado en tu buscador de películas con React:
 
 ## 💬 Características
- **Soporte de Favicon**: Se ha añadido soporte para una amplia v dad de tamaños de favicon, asegurando que el ícono del sitio se muestre correctamente en todos los dispositivos y plataformas.
+ - **Soporte de Favicon**: Se ha añadido soporte para una amplia v dad de tamaños de favicon, asegurando que el ícono del sitio se muestre correctamente en todos los dispositivos y plataformas.
 
- **Etiquetas Open Graph y Twitter**: Se han incluido etiquetas meta de Open Graph y Twitter, lo que optimiza la vista previa del sitio web en plataformas sociales como Facebook y Twitter.
+ - **Etiquetas Open Graph y Twitter**: Se han incluido etiquetas meta de Open Graph y Twitter, lo que optimiza la vista previa del sitio web en plataformas sociales como Facebook y Twitter.
 
- **Compatibilidad entre navegadores**: La página web utiliza la etiqueta meta `X-UA-Compatible`, que garantiza la compatibilidad con varios navegadores, especialmente versiones antiguas de Internet Explorer.
+ - **Compatibilidad entre navegadores**: La página web utiliza la etiqueta meta `X-UA-Compatible`, que garantiza la compatibilidad con varios navegadores, especialmente versiones antiguas de Internet Explorer.
 
- **API de películas (OMDb)**: Utilizaste la API de OMDb (Open Movie Database) para obtener información sobre películas.
+ - **Mostrar una lista de productos desde un JSON**: He creado una interfaz para mostrar una lista de productos que provienen de un archivo JSON. Esto permite a los usuarios ver los productos disponibles en la tienda.
 
- **Diseño de cuadrícula responsive**: En esta aplicación, las películas se mostrarán en filas y columnas, ajustándose para verse bien tanto en pantallas grandes como en dispositivos móviles.
+ - **Diseño de cuadrícula responsive**: En esta aplicación, los productos se mostrarán en filas y columnas, ajustándose para verse bien tanto en pantallas grandes como en dispositivos móviles.
 
- **Evitar búsquedas duplicadas**: Has implementado lógica para evitar que se realice la misma búsqueda dos veces seguidas. Esto mejora la eficiencia y la experiencia del usuario.
+ - **Filtrar por categoría**: Se implementó un filtro que permite a los usuarios seleccionar una categoría específica (por ejemplo, “Jewelery”, “Electronics”, etc.). Al aplicar el filtro, la lista de productos se actualiza para mostrar solo los productos de esa categoría.
 
- **Búsqueda automática mientras se escribe**: Cuando el usuario escribe en el campo de búsqueda, la aplicación realiza automáticamente una búsqueda en la API de OMDb sin necesidad de hacer clic en un botón adicional. Esto proporciona una respuesta más rápida y fluida para el usuario.
+ - **Filtrar por precio**: Agregé la funcionalidad de filtrar productos por rango de precios. Los usuarios pueden establecer un mínimo, y la lista de productos se ajusta automáticamente para mostrar solo los productos dentro de ese rango.
 
- **Evitar búsquedas continuas mientras se escribe (debounce)**: El "debounce" es una técnica que retrasa la ejecución de una función (en este caso, la búsqueda) hasta que el usuario ha dejado de escribir durante un breve período de tiempo (300 ms). Esto evita búsquedas continuas mientras el usuario sigue escribiendo, lo que podría sobrecargar la API o afectar el rendimiento de la aplicación.
+
+ - **Uso de useContext para evitar pasar props innecesarios**: Utilizar useContext para administrar el estado global de la aplicación. Esto evita la necesidad de pasar props manualmente entre componentes y mejora la eficiencia.
+ 
+ - **Carrito de compras**: 
+1. **Agregar productos al carrito:**
+   - Se ha implementado la capacidad de agregar productos al carrito desde la lista de productos. Los usuarios pueden hacer clic en un botón para agregar al carrito y el producto se agrega a su selección.
+
+2. **Eliminar productos del carrito:**
+   - Los usuarios pueden eliminar productos del carrito si cambian de opinión o si ya no desean comprar un artículo específico.
+
+3. **Modificar la cantidad de productos en el carrito:**
+   - Se ha implementado la funcionalidad para que los usuarios puedan ajustar la cantidad de un producto en el carrito. Esto es útil si desean comprar más o menos unidades de un artículo.
+
+4. **Sincronización de cambios en el carrito con la lista de productos:**
+   - Cuando los usuarios agregan o eliminan productos del carrito, los cambios se reflejan automáticamente en la lista de productos. Esto garantiza una experiencia coherente para los usuarios.
+
+5. **Guardar el carrito en localStorage:**
+   - Al guardar el carrito en el almacenamiento local (localStorage), los usuarios pueden recuperar su selección incluso después de recargar la página. Esto mejora la usabilidad y la comodidad.
+
 
 
 <p align="right">(<a href="#top">Volver al inicio 🔝</a>)</p>
@@ -107,7 +125,7 @@ Filtra por año de lanzamiento y descubre nuevas joyas cinematográficas.
 1. **Haz un Fork** o clona este repositorio
 
 ```bash
-git clone git@github.com:joserafael0160/Movie-Finder.git
+git clone git@github.com:joserafael0160/E-commerce.git
 ```
 
 2. Instala las dependencias:
@@ -163,22 +181,22 @@ pnpm run dev
 
 ¡Las contribuciones son siempre bienvenidas! Ya sea que estés informando errores, solicitando nuevas funciones o mejorando las funcionalidades existentes, tu ayuda es **muy apreciada**.
 
-Si tienes alguna sugerencia que podría mejorar el proyecto, por favor haz un [_fork_](https://github.com/joserafael0160/Movie-Finder/fork) del repositorio y crea una [_pull request_](https://github.com/joserafael0160/Movie-Finder/pulls). También puedes simplemente abrir un [_issue_](https://github.com/joserafael0160/Movie-Finder/issues) con la etiqueta "enhancement".
+Si tienes alguna sugerencia que podría mejorar el proyecto, por favor haz un [_fork_](https://github.com/joserafael0160/E-commerce/fork) del repositorio y crea una [_pull request_](https://github.com/joserafael0160/E-commerce/pulls). También puedes simplemente abrir un [_issue_](https://github.com/joserafael0160/E-commerce/issues) con la etiqueta "enhancement".
 
 Aquí tienes una guía rápida:
 
-1. Haz un [_fork_](https://github.com/joserafael0160/Movie-Finder/fork) del Proyecto
-2. Clona tu [_fork_](https://github.com/joserafael0160/Movie-Finder/fork) (`git clone <URL del fork>`)
+1. Haz un [_fork_](https://github.com/joserafael0160/E-commerce/fork) del Proyecto
+2. Clona tu [_fork_](https://github.com/joserafael0160/E-commerce/fork) (`git clone <URL del fork>`)
 3. Añade el repositorio original como remoto (`git remote add upstream <URL del repositorio original>`)
 4. Crea tu Rama de Funcionalidad (`git switch -c feature/NuevaFuncionalidad`)
 5. Realiza tus Cambios (`git commit -m 'Add: alguna NuevaFuncionalidad'`)
 6. Haz Push a la Rama (`git push origin feature/NuevaFuncionalidad`)
-7. Abre una [_pull request_](https://github.com/joserafael0160/Movie-Finder/pulls)
+7. Abre una [_pull request_](https://github.com/joserafael0160/E-commerce/pulls)
 
 <p align="right">(<a href="#top">Volver al inicio 🔝</a>)</p>
 
 ## 🔑 Licencia
-[MIT](https://github.com/joserafael0160/Movie-Finder/blob/main/LICENSE)
+[MIT](https://github.com/joserafael0160/E-commerce/blob/main/LICENSE)
 
 <p align="right">(<a href="#top">Volver al inicio 🔝</a>)</p>
 

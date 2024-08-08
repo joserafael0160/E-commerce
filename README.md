@@ -67,23 +67,23 @@ Make use of useContext to avoid passing unnecessary props.
 <br>
 
 >If you want to read this readme in **Spanish**
->- [**Spanish README**](https://github.com/joserafael0160/Movie-Finder/blob/main/README.es.md)
+>- [**Spanish README**](https://github.com/joserafael0160/E-commerce/blob/main/README.es.md)
 
 ## 📜 About 
-Welcome to my movie search engine! With this tool, you can explore and search for your favorite films. 
+Welcome to our E-commerce: On our site, you can explore a wide variety of products, from men’s and women’s clothing to electronic equipment and jewelry. 
 
-Filter by release year and discover new cinematic gems. 
+Looking for something specific? Use our filters by category or minimum price to find what you need. 
 
-Enjoy the magic of cinema! 🎥🍿
+Enjoy the convenience of online shopping and discover everything we have to offer! 💻🛒
 
 <p align="right">(<a href="#top" >Go Back To Top 🔝</a>)</p>
 
 ## 👀 Preview
 <h4>In a PC (1920x1080)</h4>
-<img src="./src/assets/images/webp/Movie-Finder(PC).webp" alt="Project screenshot with a resolution of 1920x1080" width="900">
+<img src="./src/assets/images/webp/E-commerce(PC).webp" alt="Project screenshot with a resolution of 1920x1080" width="900">
 
 <h4>In a iPhone SE (375x667)</h4>
-<img src="./src/assets/images/webp/Movie-Finder(iPhone_SE).webp" alt="Project screenshot with a resolution of 375x667" width="200">
+<img src="./src/assets/images/webp/E-commerce(iPhone_SE).webp" alt="Project screenshot with a resolution of 375x667" width="200">
 
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
 
@@ -92,11 +92,28 @@ Enjoy the magic of cinema! 🎥🍿
 - **Favicon Support**: Support for a wide range of favicon sizes has been added, ensuring that the site’s icon displays correctly on all devices and platforms.
 - **Open Graph and Twitter Tags**: Open Graph and Twitter meta tags have been included, which optimize the preview of the website on social platforms like Facebook and Twitter.
 - **Cross-Browser Compatibility**: The web page uses the `X-UA-Compatible` meta tag, which helps ensure compatibility with multiple browsers, especially older versions of Internet Explorer.
-- **Movie API (OMDb)**: I used the OMDb (Open Movie Database) API to retrieve movie information.
-- **Grid Responsive**: In this application, the movies will be displayed in rows and columns, adjusting to look good on both large screens and mobile devices.
-- **Avoiding Duplicate Searches**: I've implemented logic to prevent the same search from being performed twice in a row. This improves efficiency and the user experience.
-- **Automatic Search While Typing**: When the user types in the search field, the application automatically performs a search against the OMDb API without requiring an additional button click. This provides a quicker and smoother response for the user.
-- **Avoiding Continuous Searches While Typing (Debounce)**: Debounce is a technique that delays the execution of a function (in this case, the search) until the user has stopped typing for a brief period (300 ms). This prevents continuous searches while the user is still typing, which could overload the API or impact application performance.
+- **Displaying a Product List from JSON**: Created an interface to display a list of products sourced from a JSON file. Users can view available products in the store.
+- **Responsive Grid Design**: Products are displayed in rows and columns, adjusting to look good on both large screens and mobile devices.
+- **Category Filtering**: Implemented a filter that allows users to select a specific category (e.g., “Jewelry,” “Electronics,” etc.). Applying the filter updates the product list to show only items from that category.
+- **Price Filtering**: Added functionality to filter products by price range. Users can set a minimum, and the product list automatically adjusts to display items within that range.
+- **Using useContext to Avoid Passing Unnecessary Props**: Managed global application state using `useContext`. This eliminates the need to manually pass props between components and improves efficiency.
+- **Shopping Cart**: 
+1. **Adding Products to the Cart:**
+   - Implemented the ability to add products to the cart from the product list. Users can click a button to add an item to their selection.
+
+2. **Removing Products from the Cart:**
+   - Users can remove products from the cart if they change their minds or no longer wish to purchase a specific item.
+
+
+3. **Modifying Product Quantity in the Cart:**
+   - Functionality allows users to adjust the quantity of a product in the cart. Useful if they want to buy more or fewer units of an item.
+
+4. **Synchronizing Cart Changes with the Product List:**
+   - When users add or remove products from the cart, the changes automatically reflect in the product list. Ensures a consistent experience.
+
+5. **Saving the Cart in localStorage:**
+   - By saving the cart in local storage, users can retrieve their selection even after page reloads. Improves usability and convenience.
+
   
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
 
@@ -113,7 +130,7 @@ Enjoy the magic of cinema! 🎥🍿
 1. **Fork** or clone this repository
 
 ```bash
-git clone git@github.com:joserafael0160/Movie-Finder.git
+git clone git@github.com:joserafael0160/E-commerce.git
 ```
 
 2. Install the dependencies: 
@@ -171,22 +188,22 @@ pnpm run dev
 
 Contributions are always welcome! Whether you’re reporting bugs, requesting new features, or improving existing functionalities, your help is **greatly appreciated**.
 
-If you have any suggestions that could improve the project, please make a [_fork_](https://github.com/joserafael0160/Movie-Finder/fork) of the repository and create a [_pull request_](https://github.com/joserafael0160/Movie-Finder/pulls). You can also simply open an [_issue_](https://github.com/joserafael0160/Movie-Finder/issues) with the “enhancement” label.
+If you have any suggestions that could improve the project, please make a [_fork_](https://github.com/joserafael0160/E-commerce/fork) of the repository and create a [_pull request_](https://github.com/joserafael0160/E-commerce/pulls). You can also simply open an [_issue_](https://github.com/joserafael0160/E-commerce/issues) with the “enhancement” label.
 
 Here is a quick guide:
 
-1. Make a [_fork_](https://github.com/joserafael0160/Movie-Finder/fork) of the Project
-2. Clone your [_fork_](https://github.com/joserafael0160/Movie-Finder/fork) (`git clone <URL of the fork>`)
+1. Make a [_fork_](https://github.com/joserafael0160/E-commerce/fork) of the Project
+2. Clone your [_fork_](https://github.com/joserafael0160/E-commerce/fork) (`git clone <URL of the fork>`)
 3. Add the original repository as remote (`git remote add upstream <URL of the original repository>`)
 4. Create your Feature Branch (`git switch -c feature/NewFeature`)
 5. Make your Changes (`git commit -m 'Add: some NewFeature'`)
 6. Push to the Branch (`git push origin feature/NewFeature`)
-7. Open a [_pull request_](https://github.com/joserafael0160/Movie-Finder/pulls)
+7. Open a [_pull request_](https://github.com/joserafael0160/E-commerce/pulls)
 
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
 
 ## 🔑 License
-[MIT](https://github.com/joserafael0160/Movie-Finder/blob/main/LICENSE)
+[MIT](https://github.com/joserafael0160/E-commerce/blob/main/LICENSE)
 
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
 
